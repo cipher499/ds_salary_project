@@ -6,7 +6,7 @@ Created on Mon, July 17, 2023
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+import numpy as np 
 
 #read the data into a dataframe
 df = pd.read_csv("data_eda.csv")
@@ -111,3 +111,21 @@ mean_absolute_error(y_test, tpred_lr)
 mean_absolute_error(y_test, tpred_lm_l)
 mean_absolute_error(y_test, tpred_rf)
 
+
+# productionise the model by converting it into an API endpoint using Flask
+#-------------------------------- ----------------#
+import pickle
+#-------------------------------- ----------------#
+pickl = {'model': lm_l}
+pickle.dump(pickl, open('model_file' + ".p", "wb"))
+
+file_name = "model_file.p"
+with open(file_name, 'rb') as pickled:
+    data = pickle.load(pickled)
+    model = data['model']
+
+
+model.predict(X_test.iloc[1,:].values.reshape(1,-1))
+y_test[1]
+
+list(X_test.iloc[1,:])
