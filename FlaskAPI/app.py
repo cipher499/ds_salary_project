@@ -1,3 +1,9 @@
+""""
+Created on Tue, July 18, 2023
+'
+@author: cipher499
+"""
+
 import flask
 from flask import Flask, jsonify, request
 import json
@@ -27,4 +33,4 @@ def predict():
     return response, 200
 
 if __name__ == "__main__":
-    application.run(debug=True)
+    app.run(debug=True)
