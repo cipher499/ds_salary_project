@@ -1,3 +1,9 @@
+""""
+Created on Tue, July 18, 2023
+'
+@author: cipher499
+"""
+
 import requests
 from data_input import data_in
 
