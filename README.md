@@ -3,7 +3,7 @@
 * Created a model that estimates data science salaries (MAE ~ $ 25K) in the USA.
 * Cleaned the Glassdoor data science salary dataset
 * Engineered features to quantify the demand for data skills (python, excel, spark, etc.)
-* Trained & Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to find the best parameters
+* Trained and optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to find the best parameters
 * Built a client-facing API using flask
 
 ## Code and Resources used
